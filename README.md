@@ -1,17 +1,17 @@
 promet_php Cookbook
 ===================
-TODO: A Chef Cookbook to provide PHP extentions with more customization.
+A Chef Cookbook to provide PHP extentions with more customization.
 
 Requirements
 ------------
 Operating Systems: Debian, Ubuntu.  Syntax not extended to non-deb based distros yet.
 
 `promet_php::apache2` - requires the Opscode `php::default` recipe. 
+
 `promet_php::module_apc` - requires the Opscode `php::module_apc`` recipe.
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
 ````
 default['promet_php']['realpath_cache_size']                    = "16k"
@@ -55,25 +55,10 @@ default['promet_php']['apc']['enable_cli']                      = "1"
 default['promet_php']['apc']['shm_size']                        = "64"
 ````
 
-e.g.
-#### promet_php::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['promet_php']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
 Usage
 -----
+
+### Apache2 
 
 In your run_list or role, include:
 `"recipe[promet_php::apache2]"`
@@ -83,7 +68,11 @@ The apache2 recipe includes the opscode php::default recipe and provides customi
 In your run_list or role, include:
 `"recipe[promet_php::module_apc]"`
 
-The apache2 recipe includes the opscode php::module_apc recipe and provides customizable attributes for the apc extension.
+### PHP-APC
+
+The module_apc recipe includes the Opscode php::module_apc recipe and provides customizable attributes for the apc extension.
+
+This role shows the inclusion of the base Opscode recipes with this cookbook's extensions:
 
 ```json
 name "php"
