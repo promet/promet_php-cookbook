@@ -1,6 +1,6 @@
 promet_php Cookbook
 ===================
-A Chef Cookbook to provide PHP extentions with more customization.
+A Chef Cookbook to provide PHP greater attribute customization to Opscode Community recipes.
 
 Requirements
 ------------
@@ -8,7 +8,7 @@ Operating Systems: Debian, Ubuntu.  Syntax not extended to non-deb based distros
 
 `promet_php::apache2` - requires the Opscode `php::default` recipe. 
 
-`promet_php::module_apc` - requires the Opscode `php::module_apc`` recipe.
+`promet_php::module_apc` - requires the Opscode `php::module_apc` recipe.
 
 Attributes
 ----------
