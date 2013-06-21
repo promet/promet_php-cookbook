@@ -1,0 +1,11 @@
+extension=apc.so
+
+apc.rfc1867=<%= node[:promet_php][:apc][:apc_rfc1867] %>
+apc.enabled=<%= node[:promet_php][:apc][:apc_enabled] %>
+apc.shm_segments=<%= node[:promet_php][:apc][:shm_segments] %>
+apc.ttl=<%= node[:promet_php][:apc][:ttl] %>
+apc.user_ttl=<%= node[:promet_php][:apc][:user_ttl] %>
+apc.num_files_hint=<%= node[:promet_php][:apc][:num_files_hint] %>
+; apc.mmap_file_mask=/tmp/apc.XXXXXX
+apc.enable_cli=<%= node[:promet_php][:apc][:enable_cli] %>
+apc.shm_size=<%= node[:promet_php][:apc][:shm_size] %>
