@@ -68,7 +68,7 @@ The apache2 recipe includes the opscode php::default recipe and provides customi
 In your run_list or role, include:
 `"recipe[promet_php::module_apc]"`
 
-### PHP-APC
+### Module_APC
 
 The module_apc recipe includes the Opscode php::module_apc recipe and provides customizable attributes for the apc extension.
 
