@@ -8,6 +8,7 @@
 #
 
 include_recipe "php"
+include_recipe "apache2::mod_php5"
 
 template "/etc/php5/apache2/php.ini" do
  source "php.ini.erb"
