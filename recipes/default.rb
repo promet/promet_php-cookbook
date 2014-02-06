@@ -2,9 +2,8 @@
 # Cookbook Name:: promet_php
 # Recipe:: default
 #
-# Copyright 2013, Promet Solutions, Inc.
+# Copyright (C) 2014 YOUR_NAME
+# 
+# All rights reserved - Do Not Redistribute
 #
-# All rights reserved - Redistribute
-#
-
-# This recipe, it does nothing.
+include_recipe 'php'
