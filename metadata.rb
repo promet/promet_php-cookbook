@@ -7,4 +7,4 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.2.0'
 depends		 'apache'
 depends		 'apt'
-depends		 'php'
+depends		 'php', '= 1.3.10'
