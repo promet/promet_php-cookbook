@@ -24,5 +24,10 @@ template "/etc/php5/conf.d/apc.ini" do
  owner "root"
  group 0
  mode 00644
- notifies :reload, "service[apache2]"
+ if node["nginx"] == true
+   notifies :reload, "service[nginx]"
+ end
+ if node["apache"] == true
+   notifies :reload, "service[apache2]"
+ end
 end

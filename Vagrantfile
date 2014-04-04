@@ -83,7 +83,6 @@ Vagrant.configure("2") do |config|
         :max_input_time => "300",
         :realpath_cache_size => "64k",
         :conf_dir => "/etc/php5/apache2",
-        #:conf_dir => "/etc/php5/fpm",
         :apc => {
           :shm_size => "96"
         }
@@ -92,6 +91,7 @@ Vagrant.configure("2") do |config|
 
     chef.run_list = [
       "recipe[apt]",
+      "recipe[nginx]",
       "recipe[promet_php]",
       #"recipe[promet_php::apache2]",
       "recipe[promet_php::php-fpm]",

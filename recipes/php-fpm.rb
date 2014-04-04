@@ -7,11 +7,15 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe	'apt'
 include_recipe	'nginx'
 
 package 'php5-fpm' do
-  action :upgrade
+  action :install
+end
+
+service 'php5-fpm' do
+  supports :status => true, :restart => true, :reload => true
+  action [ :enable, :start ]
 end
 
 template "/etc/php5/fpm/php.ini" do
