@@ -100,7 +100,7 @@ Vagrant.configure("2") do |config|
       "recipe[php::module_curl]",
       "recipe[promet_php::module_mcrypt]",
       "recipe[promet_php::module_apc]",
-      "recipe[promet_memcached]",
+      "recipe[memcached]",
       "recipe[promet_php::module_memcached]"
     ]
   end

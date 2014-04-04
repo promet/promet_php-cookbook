@@ -14,7 +14,7 @@ package 'php5-fpm' do
 end
 
 service 'php5-fpm' do
-  supports :status => true, :restart => true, :reload => true
+  supports :status => true, :restart => true, :reload => true, :stop => true
   action [ :enable, :start ]
 end
 
