@@ -7,15 +7,13 @@
 # All rights reserved - Redistribute
 #
 
-include_recipe 'php'
-
 #dependency for PECL APC
 package "libpcre3-dev" do
-  action :install
+  action :upgrade
 end
 
-php_pear "apc" do
-  version "3.1.13"
+php_pear 'APC' do
+  version '3.1.13'
   action :install
 end
 
@@ -25,7 +23,7 @@ template "/etc/php5/conf.d/apc.ini" do
  group 0
  mode 00644
  if node["nginx"] == true
-   notifies :reload, "service[nginx]"
+   notifies :reload, "service[php5-fpm]"
  end
  if node["apache"] == true
    notifies :reload, "service[apache2]"
