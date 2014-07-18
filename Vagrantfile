@@ -84,21 +84,24 @@ Vagrant.configure("2") do |config|
         :realpath_cache_size => "64k",
         :conf_dir => "/etc/php5/apache2",
         :apc => {
-          :shm_size => '128'
+          :shm_size => "96"
         }
       }
     }
 
     chef.run_list = [
       "recipe[apt]",
+      "recipe[nginx]",
       "recipe[promet_php]",
-      "recipe[promet_php::apache2]",
+      #"recipe[promet_php::apache2]",
+      "recipe[promet_php::php-fpm]",
       "recipe[php::module_mysql]",
       "recipe[php::module_gd]",
-      "recipe[php::module_memcache]",
-      "recipe[promet_php::module_apc]",
+      "recipe[php::module_curl]",
       "recipe[promet_php::module_mcrypt]",
-      "recipe[php::module_curl]"
+      "recipe[promet_php::module_apc]",
+      "recipe[memcached]",
+      "recipe[promet_php::module_memcached]"
     ]
   end
 end
