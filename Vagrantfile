@@ -12,8 +12,10 @@ Vagrant.configure("2") do |config|
   #config.vm.synced_folder ".", "/home/vagrant/kirkberk", :nfs => true
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "opscode_debian-7.1.0_provisionerless.box"
-  config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_debian-7.1.0_provisionerless.box"
+  #config.vm.box = "opscode_debian-7.1.0_provisionerless.box"
+  #config.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_debian-7.1.0_provisionerless.box"
+  config.vm.box = "opscode_centos-6.5_chef-provisionerless.box"
+  config.vm.box_url = "http://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
@@ -90,7 +92,9 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-      "recipe[apt]",
+      #"recipe[apt]",
+      "recipe[yum]",
+      "recipe[build-essential]",
       "recipe[nginx]",
       "recipe[promet_php]",
       #"recipe[promet_php::apache2]",
@@ -100,7 +104,7 @@ Vagrant.configure("2") do |config|
       "recipe[php::module_curl]",
       "recipe[promet_php::module_mcrypt]",
       "recipe[promet_php::module_apc]",
-      "recipe[memcached]",
+      "recipe[memcached-cookbook]",
       "recipe[promet_php::module_memcached]"
     ]
   end
