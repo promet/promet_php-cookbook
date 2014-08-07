@@ -8,6 +8,7 @@
 #
 
 # This recipe installs the mcrypt module for PHP.
+include_recipe "yum-epel"
 
 pkg = value_for_platform(
   %w(centos redhat scientific fedora amazon) => {

@@ -1,3 +1,14 @@
+case node['platform_family']
+when 'rhel', 'fedora'
+  default['promet_php']['ini_dir']      = '/etc'
+  default['promet_php']['fpm_pkg']      = 'php-fpm'
+  default['promet_php']['fpm_dir']      = '/etc'
+when 'debian'
+  default['promet_php']['ini_dir']      = '/etc/php5/apache2'
+  default['promet_php']['fpm_pkg']      = 'php5-fpm'
+  default['promet_php']['fpm_dir']      = '/etc/php5/fpm'
+else
+end
 default['promet_php']['realpath_cache_size']			= "16k"
 default['promet_php']['realpath_cache_ttl']			= "120"
 default['promet_php']['expose_php']				= "On"
