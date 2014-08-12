@@ -94,6 +94,7 @@ Vagrant.configure("2") do |config|
     chef.run_list = [
       #"recipe[apt]",
       "recipe[yum]",
+      "recipe[yum-epel]",
       "recipe[build-essential]",
       "recipe[nginx]",
       "recipe[promet_php]",
