@@ -1,5 +1,5 @@
 case node['platform_family']
-when 'rhel', 'fedora'
+when 'rhel', 'fedora', 'centos'
   default['promet_php']['ini_dir']      = '/etc'
   default['promet_php']['fpm_pkg']      = 'php-fpm'
   default['promet_php']['fpm_dir']      = '/etc'
@@ -11,7 +11,7 @@ else
 end
 default['promet_php']['realpath_cache_size']			= "16k"
 default['promet_php']['realpath_cache_ttl']			= "120"
-default['promet_php']['expose_php']				= "On"
+default['promet_php']['expose_php']				= "Off"
 default['promet_php']['max_execution_time']			= "30"
 default['promet_php']['max_input_time']				= "60"
 default['promet_php']['max_input_nesting_level']		= "64"

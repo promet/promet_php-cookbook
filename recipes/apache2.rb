@@ -7,9 +7,6 @@
 # All rights reserved - Redistribute
 #
 
-include_recipe "php"
-include_recipe "apache2::mod_php5"
-
 template "#{node['promet_php']['ini_dir']}/php.ini" do
  source "php.ini.erb"
  owner "root"
