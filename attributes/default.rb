@@ -9,6 +9,7 @@ when 'debian'
   default['promet_php']['fpm_dir']      = '/etc/php5/fpm'
 else
 end
+default['promet_php']['max_input_vars']    = '1000'
 default['promet_php']['realpath_cache_size']			= "16k"
 default['promet_php']['realpath_cache_ttl']			= "120"
 default['promet_php']['expose_php']				= "Off"
