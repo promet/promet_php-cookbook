@@ -464,6 +464,11 @@ max_input_nesting_level = <%= node[:promet_php][:max_input_nesting_level] %>
 ;memory_limit = -1
 memory_limit = <%= node[:promet_php][:memory_limit] %>
 
+;Max Input Variables
+; The default is 1000
+; max_input_vars = 1000
+max_input_vars = <%= node[:promet_php][:max_input_vars] %>
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Error handling and logging ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
