@@ -2,7 +2,7 @@ promet_php Cookbook
 ===================
 
 ###Authoritative Version!
-this is for promet_php on the [chef server](https://chef-promet-rsc.promethost.com/cookbooks/promet_php/0.4.5)
+this is for promet_php on the [chef server](https://chef-promet-rsc.promethost.com/cookbooks/promet_php/0.4.6)
 
 A Chef Cookbook to provide PHP greater attribute customization to Opscode Community recipes.
 
