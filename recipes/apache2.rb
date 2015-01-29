@@ -8,8 +8,8 @@
 #
 
 template "#{node['promet_php']['ini_dir']}/php.ini" do
- source "php.ini.erb"
- owner "root"
+ source 'php.ini.erb'
+ owner 'root'
  group 0
  mode 00644
 end

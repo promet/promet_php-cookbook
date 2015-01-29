@@ -6,7 +6,7 @@
 #
 # All rights reserved - Redistribute
 #
-include_recipe "build-essential"
+include_recipe 'build-essential'
 #dependency for PECL APC
 case node['platform_family']
 when 'rhel', 'fedora'
@@ -16,7 +16,7 @@ when 'rhel', 'fedora'
     end
   end
 when 'debian'
-  package "libpcre3-dev" do
+  package 'libpcre3-dev' do
     action :upgrade
   end
 end
@@ -27,14 +27,14 @@ php_pear 'apc' do
 end
 
 template "#{node['php']['ext_conf_dir']}/apc.ini" do
- source "apc.ini.erb"
- owner "root"
+ source 'apc.ini.erb'
+ owner 'root'
  group 0
  mode 00644
- if node["nginx"] == true
+ if node['nginx'] == true
    notifies :reload, "#{node['promet_php']['fpm_pkg']}"
  end
- if node["apache"] == true
+ if node['apache'] == true
    notifies :reload, "#{node['promet_php']['fpm_pkg']}"
  end
 end

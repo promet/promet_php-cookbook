@@ -764,6 +764,7 @@ cgi.force_redirect = <%= node[:promet_php][:cgi_force_redirect] %>
 ; to use SCRIPT_FILENAME rather than PATH_TRANSLATED.
 ; http://php.net/cgi.fix-pathinfo
 ;cgi.fix_pathinfo=1
+cgi.fix_pathinfo= <%= node[:promet_php][:cgi_fix_pathinfo] %>
 
 ; FastCGI under IIS (on WINNT based OS) supports the ability to impersonate
 ; security tokens of the calling client.  This allows IIS to define the
