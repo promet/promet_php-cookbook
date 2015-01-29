@@ -9,13 +9,13 @@ when 'debian'
   default['promet_php']['fpm_dir']      = '/etc/php5/fpm'
 else
 end
-default['promet_php']['max_input_vars']    = '1000'
 default['promet_php']['realpath_cache_size']			= "16k"
 default['promet_php']['realpath_cache_ttl']			= "120"
 default['promet_php']['expose_php']				= "Off"
 default['promet_php']['max_execution_time']			= "30"
 default['promet_php']['max_input_time']				= "60"
 default['promet_php']['max_input_nesting_level']		= "64"
+default['promet_php']['max_input_vars']    = "1000"
 default['promet_php']['memory_limit']				= "128M"
 default['promet_php']['error_reporting']			= "E_ALL & ~E_DEPRECATED"
 default['promet_php']['display_errors']				= "Off"
