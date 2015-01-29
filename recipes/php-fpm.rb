@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe	'nginx'
+#include_recipe	'nginx'
 
 package "#{node['promet_php']['fpm_pkg']}" do
   action :install

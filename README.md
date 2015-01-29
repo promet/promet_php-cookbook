@@ -1,5 +1,9 @@
 promet_php Cookbook
 ===================
+
+###Authoritative Version!
+this is for promet_php on the [chef server](https://chef-promet-rsc.promethost.com/cookbooks/promet_php/0.4.6)
+
 A Chef Cookbook to provide PHP greater attribute customization to Opscode Community recipes.
 
 Requirements
@@ -20,6 +24,7 @@ default['promet_php']['expose_php']                             = "On"
 default['promet_php']['max_execution_time']                     = "30"
 default['promet_php']['max_input_time']                         = "60"
 default['promet_php']['max_input_nesting_level']                = "64"
+default['promet_php']['max_input_vars']                    	    = "1000"
 default['promet_php']['memory_limit']                           = "128M"
 default['promet_php']['error_reporting']                        = "E_ALL & ~E_DEPRECATED"
 default['promet_php']['display_errors']                         = "Off"
